@@ -1,5 +1,56 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default;
+}
 
 @source "../components";
 @source "../lib";
+
+@theme {
+  --color-primary: #A2CBE6;
+  --color-primary-dark: #7fb3d9;
+  --color-accent: #69a173;
+  --color-accent-dark: #5fa86b;
+  --color-text: #333333;
+  --color-heading: #000000;
+  --color-background: #EBEAE0;
+  --color-sidebar: #EBEAE0;
+  --color-border: #d4d4c8;
+  --color-white: #ffffff;
+
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-roboto-slab), ui-serif, Georgia, serif;
+}
+
+/* Override DaisyUI theme colors */
+:root, [data-theme="light"] {
+  --p: 201 61% 77%;  /* primary - #A2CBE6 */
+  --pf: 201 52% 66%; /* primary focus - #7fb3d9 */
+  --pc: 0 0% 0%;     /* primary content - black */
+  --s: 131 32% 60%;  /* secondary - #79BA84 */
+  --sf: 131 32% 51%; /* secondary focus - #5fa86b */
+  --sc: 0 0% 100%;   /* secondary content - white */
+  --a: 131 32% 60%;  /* accent - #79BA84 */
+  --af: 131 32% 51%; /* accent focus - #5fa86b */
+  --ac: 0 0% 100%;   /* accent content - white */
+  --n: 0 0% 20%;     /* neutral - #333333 */
+  --nf: 0 0% 0%;     /* neutral focus - black */
+  --nc: 0 0% 100%;   /* neutral content - white */
+  --b1: 50 15% 90%;  /* base-100 - #EBEAE0 */
+  --b2: 50 15% 85%;  /* base-200 */
+  --b3: 50 15% 80%;  /* base-300 */
+  --bc: 0 0% 20%;    /* base content - #333333 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-heading);
+}

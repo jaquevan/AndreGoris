@@ -1,0 +1,8 @@
+export { default as Header } from './Header'
+export { default as Sidebar } from './Sidebar'
+export { default as Hero } from './Hero'
+export { default as Specialties } from './Specialties'
+export { default as OfficeGallery } from './OfficeGallery'
+export { default as Qualifications } from './Qualifications'
+export { default as PracticeInfo } from './PracticeInfo'
+export { default as ContactCTA } from './ContactCTA'

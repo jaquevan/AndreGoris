@@ -1,9 +1,33 @@
+import {
+  Header,
+  Sidebar,
+  Hero,
+  Specialties,
+  OfficeGallery,
+  PracticeInfo,
+  Qualifications,
+  ContactCTA,
+} from '@/components'
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold">Andre Goris</h1>
+    <div className="min-h-screen bg-white">
+      <Header />
+
+      <div className="flex flex-col lg:flex-row">
+        <Sidebar />
+
+        <main className="flex-1 p-6 lg:p-10 max-w-4xl">
+          <div className="space-y-16">
+            <Hero />
+            <Specialties />
+            <OfficeGallery />
+            <PracticeInfo />
+            <Qualifications />
+            <ContactCTA />
+          </div>
+        </main>
       </div>
-    </main>
+    </div>
   )
 }
