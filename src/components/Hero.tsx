@@ -21,22 +21,23 @@ export default function Hero() {
 
   return (
     <section ref={sectionRef} className="hero bg-white rounded-2xl shadow-sm">
-      <div className="hero-content flex-col lg:flex-row gap-8 p-8">
-        <div className="w-80 h-100 relative rounded-xl overflow-hidden shadow-lg shrink-0">
+      <div className="hero-content flex-col lg:flex-row gap-8 p-6 md:p-8">
+        <div className="w-full max-w-[250px] sm:max-w-[300px] lg:w-80 mx-auto lg:mx-0 h-auto relative rounded-xl overflow-hidden shadow-lg shrink-0">
           <Image
             src="/images/Andres-headshot.png"
-            alt="Andres Goris, LCSW"
-            fill
-            className="object-cover"
+            alt="Andres Goris, LCSW - Headshot of a psychotherapist in Kew Gardens, NY"
+            width={400}
+            height={500}
+            className="object-cover w-full h-full"
             priority
           />
         </div>
 
         <div className="text-center lg:text-left">
           <p className="text-primary-dark font-semibold mb-2 text-sm tracking-wide">
-            Licensed Clinical Social Worker
+            Licensed Clinical Social Worker in Kew Gardens, NY
           </p>
-          <h1 className="text-4xl font-heading font-bold text-heading mb-4">
+          <h1 className="text-3xl md:text-4xl font-heading font-bold text-heading mb-4">
             Andres Goris, LCSW
           </h1>
           <p className="text-text leading-relaxed mb-4 max-w-lg">

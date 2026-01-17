@@ -9,7 +9,7 @@ interface HeaderProps {
 
 export default function Header({ onToggleMenu }: HeaderProps) {
   return (
-    <header className="bg-white border-b border-border sticky top-0 z-50">
+    <header className="bg-white border-b border-border sticky top-0 z-40">
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link

@@ -39,15 +39,15 @@ export default function OfficeGallery() {
         The Office
       </h2>
       <p className="text-text text-sm mb-6">
-        A calm, welcoming space for healing. One block from Kew Gardens station.
+        A calm, welcoming space for healing. One block from Kew Gardens station, Queens.
       </p>
 
-      <div className="grid grid-cols-12 gap-3 h-[400px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {/* Building - Main large image on left */}
-        <div className="col-span-12 md:col-span-5 row-span-2 relative rounded-xl overflow-hidden shadow-md">
+        <div className="md:col-span-1 lg:col-span-1 relative rounded-xl overflow-hidden shadow-md h-[300px] md:h-[400px]">
           <Image
             src="/images/building-outside.png"
-            alt="Office building exterior"
+            alt="Office building exterior in Kew Gardens, NY"
             fill
             className="object-cover"
           />
@@ -56,34 +56,32 @@ export default function OfficeGallery() {
           </div>
         </div>
 
-        {/* Top right - chairs (horizontal image) */}
-        <div className="col-span-6 md:col-span-4 relative rounded-xl overflow-hidden shadow-md h-[190px]">
-          <Image
-            src="/images/chairs.png"
-            alt="Comfortable seating area"
-            fill
-            className="object-cover"
-          />
+        {/* Collage of smaller images and map */}
+        <div className="md:col-span-1 lg:col-span-2 grid grid-cols-2 gap-3">
+          <div className="relative rounded-xl overflow-hidden shadow-md h-[150px] md:h-[190px]">
+            <Image
+              src="/images/chairs.png"
+              alt="Comfortable seating area in the therapy office"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative rounded-xl overflow-hidden shadow-md h-[150px] md:h-[190px] z-0">
+            <Map />
+          </div>
+          <div className="col-span-2 relative rounded-xl overflow-hidden shadow-md h-[150px] md:h-[190px]">
+            <Image
+              src="/images/sofa.png"
+              alt="Therapy room sofa in Kew Gardens office"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
 
-        {/* Map on right */}
-        <div className="col-span-6 md:col-span-3 relative rounded-xl overflow-hidden shadow-md h-[190px]">
-          <Map />
-        </div>
-
-        {/* Bottom - sofa (wide horizontal) */}
-        <div className="col-span-7 md:col-span-4 relative rounded-xl overflow-hidden shadow-md h-[190px]">
-          <Image
-            src="/images/sofa.png"
-            alt="Therapy room sofa"
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        {/* Location info card */}
-        <div className="col-span-5 md:col-span-3 bg-accent-dark rounded-xl p-4 flex flex-col justify-center text-white h-[85px]">
-          <p className="text-xs opacity-90 mb-1">
+        {/* Location info card (now spanning full width on smaller screens) */}
+        <div className="col-span-full md:col-span-2 lg:col-span-3 bg-accent-dark rounded-xl p-4 flex flex-col justify-center text-white min-h-[100px]">
+          <p className="font-semibold text-sm mb-1">
             Kew Gardens, NY 11415
           </p>
           <a

@@ -32,7 +32,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         aria-hidden="true"
       />
       <aside
-        className={`fixed lg:sticky top-0 left-0 h-full w-72 bg-white p-6 self-start overflow-y-auto border-r border-border z-50 transform transition-transform ${
+        className={`fixed left-0 h-full w-72 bg-white p-6 self-start overflow-y-auto border-r border-border z-50 transform transition-transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } lg:translate-x-0 lg:h-screen`}
       >

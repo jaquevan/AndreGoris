@@ -23,6 +23,11 @@ const qualifications = [
     title: 'National Institute for Psychotherapies',
     detail: 'Certificate in Child & Adolescent Psychoanalytic Psychotherapy, 2010',
   },
+    {
+        icon: FaCertificate,
+        title: 'Object Relations Institute',
+        detail: 'Currently enrolled in Object Relations Psychotherapy Training for Adults',
+    }
 ]
 
 export default function Qualifications() {
